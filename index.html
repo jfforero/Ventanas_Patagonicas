@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <main id="sketch-host" aria-label="Animation canvas"></main>
+    <aside id="control-panel" class="control-panel" aria-label="Motion controls">
+      <div class="control-panel__preview">
+        <img src="images/A1.jpg" alt="Background layer preview" width="72" height="40" class="control-panel__thumb" />
+        <div class="control-panel__preview-actions">
+          <button type="button" class="control-panel__icon-btn" id="next-pair-btn" aria-label="Next image pair" title="Next pair (A→B→…)">▶</button>
+          <button type="button" class="control-panel__icon-btn" id="swap-layers-btn" aria-label="Swap background and foreground" title="Swap back / front within pair">⇄</button>
+        </div>
+      </div>
+      <div class="control-panel__middle">
+        <p id="pair-label" class="control-panel__pair-label" aria-live="polite"></p>
+        <div class="control-panel__slider-block">
+          <label for="velocity" class="control-panel__label">Screen motion speed</label>
+          <input type="range" id="velocity" min="0" max="300" value="100" step="1" />
+          <output id="velocity-value" class="control-panel__value" for="velocity">100%</output>
+        </div>
+      </div>
+    </aside>
+    <script src="sketch.js"></script>
+  </body>
+</html>
